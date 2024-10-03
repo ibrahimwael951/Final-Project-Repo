@@ -1,0 +1,323 @@
+/* 
+@keyframes rotate360 {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+/* https://github.com/ibrahimwael951/final-project.git */
+@keyframes rotate360 {
+  from {
+      transform:  scale(0);
+  }
+  to {
+      transform:  scale(1);
+  }
+}
+
+.apear{
+  animation:  appear linear;
+  animation-timeline: view();
+  animation-range: entry 7%;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    transition: 500ms ;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 3px;
+    font-weight: 300;
+    scroll-behavior: smooth;
+}
+
+ body{
+    background: rgb(255, 255, 255);
+ 
+ 
+ 
+overflow-x: hidden;
+/* background-image: url(../assets/stars.jpg); */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+   
+ 
+
+
+ /* header */
+
+
+ .header{
+    display: flex;
+    justify-content: center;
+    
+  }
+  header {
+     background: rgb(255, 255, 255);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     z-index: 20;
+     position: fixed;
+     border-radius:0 0 20px 20px;
+    padding: 10px 0px;
+    margin: auto;
+    width: 100%;
+  }
+  
+ .icon-area{
+    display: flex;
+    align-items: center ;
+    cursor: pointer;
+     margin-left: 10px;
+ }
+ .icon-img{
+  height: 40px;
+   
+  display: inline;
+ }
+ .icon-text{
+    font-size: 28px ;
+    font-weight: 200;
+    color: rgb(33, 55, 252);
+ }
+ 
+ .buttons-area{
+    display: flex;
+    align-items: center;
+  
+    
+ }
+ .buttons-header{
+    font-size: 20px;
+    border: none;
+    margin-right: 16px;
+    cursor: pointer;
+    background: transparent;
+ }
+ .buttons-header:hover{
+    color: rgb(33, 55, 252);
+ 
+ } 
+
+ 
+
+ .bg{
+  height: 100VH;
+  margin-top: 87VH;
+
+ }
+ .bg-img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 100%;
+  background-image: url(../assets/island2.jpg);
+   background-position:  center;
+   background-repeat: no-repeat;
+   background-size: cover;
+
+   
+ }
+  
+ .name{
+   z-index: 10;
+  
+  
+   position: absolute;
+   top: 0%;
+   left: 0%;
+ width: 100%;
+ height: 100VH;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ }
+ .name h1{
+  z-index: 10000;
+   font-size: 70px;
+    cursor: pointer;
+     color: rgb(0, 0, 0);
+     opacity: 0.3;
+ }
+ .name h1:HOVER{
+   opacity: 1;
+ }
+
+ /* ocean */
+ .ocean{
+   width: 100%;
+   height: 140vh;
+  margin-top: -100vh;
+background:  #31505b;
+ }
+ .ocean-h1{
+  z-index: 10;
+  position: absolute;
+  top: 130vh;
+  text-align: center;
+  width: 100%;
+  font-size: 70px;
+  opacity: 0.3;
+ }
+ .ocean-h1:hover{
+
+  opacity: 1;
+ }
+
+ .morgan-side{
+
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  height: 130vh;
+  padding-left:  40px;
+  padding-right:  40px;
+  /* background: #000; */
+ }
+ 
+ .morgan-side iframe{
+  /* border: 1px solid red; */
+  /* padding: 10px ; */
+   z-index: 200;
+  height: 300px;
+  /* background: #000; */
+  border-radius: 20px;
+  box-shadow: 2px 3px 10px #1b2c32ae, -2px -3px 10px #1b2c32ae;
+
+
+ }
+ .morgan-information{ 
+  z-index: 200;
+  width: 600px;
+  height: fit-content;
+  /* background: rgb(255, 255, 255); */
+  background-color: #31505b56;
+  display: flex;
+  justify-content: center;
+  box-shadow: 5px 5px 10px rgb(40, 51, 57);
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+color: #a8b4bf;
+ 
+ }
+ .morgan-information h1{
+font-size: 30px;
+margin-bottom: 30px;
+ }
+ .morgan-information p{
+
+  font-size: 23px;
+ }
+
+ .floor{
+  width: 100%;
+ 
+  
+ 
+ }
+ .floor img{
+  position: absolute;
+  width: 100%;
+ top: 110vh;
+  left: 0;
+  opacity: .4;
+ }
+    
+@keyframes ocean{
+   form{background-color: linear-gradient(rgb(30, 169, 212), rgb(0, 72, 255));}
+   to{ background-color: linear-gradient(rgb(24, 141, 177),blue);}
+} 
+ 
+ @media screen and (min-width:1024px) {
+   
+
+   header{
+      width: 66.6%;
+      align-items: center;
+      padding: 16px;
+      
+   }} 
+.waves {
+   position:relative;
+   width: 100%;
+   height:15vh;
+   margin-bottom:-7px; /*Fix for safari gap*/
+   min-height:100px;
+   max-height:150px;
+  
+ }
+ 
+ .content {
+   position:relative;
+   height:20vh;
+   text-align:center;
+   background-color: white;
+ }
+ 
+ /* Animation */
+ 
+ .parallax > use {
+   animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+ }
+ .parallax > use:nth-child(1) {
+   animation-delay: -2s;
+   animation-duration: 7s;
+    
+ }
+ .parallax > use:nth-child(2) {
+   animation-delay: -3s;
+   animation-duration: 10s;
+ }
+ .parallax > use:nth-child(3) {
+   animation-delay: -4s;
+   animation-duration: 13s;
+ }
+ .parallax > use:nth-child(4) {
+   animation-delay: -5s;
+   animation-duration: 20s;
+ }
+ @keyframes move-forever {
+   0% {
+    transform: translate3d(-90px,0,0);
+   }
+   100% { 
+     transform: translate3d(85px,0,0);
+   }
+ }
+ /*Shrinking for mobile*/
+ @media (max-width: 768px) {
+   .waves {
+     height:40px;
+     min-height:40px;
+   }
+ 
+ 
+ }
+
+
+ @keyframes appear {
+  from {
+      transform:  scale(0);
+  }
+  to {
+      transform:  scale(1);
+  }
+}
+
+.apear{
+  animation:  appear linear;
+  animation-timeline: view();
+  animation-range: entry 7%;
+}
